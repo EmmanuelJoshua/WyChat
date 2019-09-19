@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXSpinner?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import de.jensd.fx.glyphs.materialdesignicons.MaterialDesignIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" fx:id="rootPane" prefHeight="526.0" prefWidth="677.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.WyChat_HomeController">
+   <children>
+      <ImageView fitHeight="526.0" fitWidth="677.0" pickOnBounds="true">
+         <image>
+            <Image url="@images/girl-1920x1080-silhouette-shadow-4k-18685.jpg" />
+         </image>
+      </ImageView>
+      <StackPane prefHeight="526.0" prefWidth="677.0" style="-fx-background-color: rgba(1,1,1,0.2);" visible="false" />
+      <JFXButton buttonType="RAISED" graphicTextGap="1.0" layoutX="106.0" layoutY="406.0" onAction="#createConnection" prefHeight="62.0" prefWidth="200.0" style="-fx-background-color: #802876; -fx-background-radius: 15;" text="Create Connection" textFill="#fcf7f7" AnchorPane.leftAnchor="106.0">
+         <font>
+            <Font name="Montserrat Bold" size="15.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="36.0" fitWidth="36.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/icons8_Speech_Bubble_96px.png" />
+               </image>
+            </ImageView>
+         </graphic>
+         <padding>
+            <Insets bottom="5.0" right="10.0" top="5.0" />
+         </padding>
+      </JFXButton>
+      <JFXButton buttonType="RAISED" contentDisplay="RIGHT" layoutX="366.0" layoutY="406.0" onAction="#joinConnection" prefHeight="62.0" prefWidth="200.0" style="-fx-background-color: #802876; -fx-background-radius: 15;" text="Join Connection" textFill="#fcf7f7">
+         <font>
+            <Font name="Montserrat Bold" size="15.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="34.0" fitWidth="33.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/icons8_Wi-Fi_100px.png" />
+               </image>
+            </ImageView>
+         </graphic>
+         <padding>
+            <Insets left="5.0" />
+         </padding>
+      </JFXButton>
+      <Pane layoutX="633.0" layoutY="3.0" prefHeight="40.0" prefWidth="40.0" style="-fx-background-color: #F4F3EF; -fx-background-radius: 50;">
+         <children>
+            <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="5.0" layoutY="5.0" onMousePressed="#exitButton" pickOnBounds="true">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <image>
+                  <Image url="@images/close5.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+      <Pane layoutX="93.0" layoutY="286.0" prefHeight="104.0" prefWidth="273.0" style="-fx-background-color: rgba(1,1,1,0.5); -fx-background-radius: 50;">
+         <children>
+            <Text fill="#788aa4" layoutX="34.0" layoutY="73.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Wy">
+               <font>
+                  <Font name="Lato-Light" size="58.0" />
+               </font>
+            </Text>
+            <Text fill="#03a9cd" layoutX="120.0" layoutY="75.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Chat">
+               <font>
+                  <Font name="SFNS Display" size="62.0" />
+               </font>
+            </Text>
+         </children></Pane>
+      <Text fill="WHITE" layoutX="5.0" layoutY="516.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Powered By WyChat ©">
+         <font>
+            <Font name="Montserrat Bold" size="14.0" />
+         </font>
+      </Text>
+      <ImageView fitHeight="352.0" fitWidth="369.0" layoutX="236.0" layoutY="23.0" pickOnBounds="true">
+         <image>
+            <Image url="@images/WyChat.png" />
+         </image>
+      </ImageView>
+      <Pane fx:id="createPane" prefHeight="526.0" prefWidth="677.0" style="-fx-background-color: rgba(1,1,1,0.6);" visible="false">
+         <children>
+            <Pane fx:id="setWiFi" layoutX="101.0" layoutY="67.0" prefHeight="392.0" prefWidth="476.0" style="-fx-background-color: #F4F3EF; -fx-background-radius: 20;">
+               <children>
+                  <ImageView fitHeight="62.0" fitWidth="47.0" layoutX="55.0" layoutY="124.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/user.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="62.0" fitWidth="47.0" layoutX="56.0" layoutY="200.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/pass.png" />
+                     </image>
+                  </ImageView>
+                  <JFXButton buttonType="RAISED" layoutX="180.0" layoutY="274.0" onAction="#create" prefHeight="47.0" prefWidth="125.0" style="-fx-background-color: #802876; -fx-background-radius: 15;" text="Create" textFill="WHITE">
+                     <font>
+                        <Font name="Montserrat Regular" size="18.0" />
+                     </font>
+                  </JFXButton>
+                  <TextField fx:id="username" layoutX="106.0" layoutY="129.0" prefHeight="42.0" prefWidth="275.0" style="-fx-background-color: #E3E3E3; -fx-background-radius: 10; -fx-text-fill: #2B2733;">
+                     <font>
+                        <Font name="Montserrat Regular" size="16.0" />
+                     </font>
+                  </TextField>
+                  <Text fill="#645459" layoutX="106.0" layoutY="119.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Username">
+                     <font>
+                        <Font name="Montserrat Regular" size="19.0" />
+                     </font>
+                  </Text>
+                  <TextField fx:id="password" layoutX="106.0" layoutY="211.0" prefHeight="42.0" prefWidth="273.0" style="-fx-background-color: #E3E3E3; -fx-background-radius: 10; -fx-text-fill: #2B2733;">
+                     <font>
+                        <Font name="Montserrat Regular" size="16.0" />
+                     </font>
+                  </TextField>
+                  <Text fill="#645459" layoutX="106.0" layoutY="201.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Password">
+                     <font>
+                        <Font name="Montserrat Regular" size="19.0" />
+                     </font>
+                  </Text>
+               </children>
+            </Pane>
+            <Pane layoutX="612.0" layoutY="26.0" prefHeight="40.0" prefWidth="40.0" style="-fx-background-color: #F4F3EF; -fx-background-radius: 50;">
+               <children>
+                  <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="5.0" layoutY="5.0" onMousePressed="#backButton1" pickOnBounds="true">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <image>
+                        <Image url="@images/back.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+            <Pane fx:id="getStarted" cacheShape="false" layoutX="101.0" layoutY="67.0" prefHeight="392.0" prefWidth="476.0" style="-fx-background-color: #F4F3EF; -fx-background-radius: 20;" visible="false">
+               <children>
+                  <JFXSpinner fx:id="spinner" layoutX="166.0" layoutY="85.0" prefHeight="148.0" prefWidth="145.0" />
+                  <Text fx:id="connection" fill="#3f4755" layoutX="128.0" layoutY="285.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Creating Connection . . .">
+                     <font>
+                        <Font name="Montserrat Regular" size="19.0" />
+                     </font>
+                  </Text>
+                  <JFXButton fx:id="start" buttonType="RAISED" layoutX="172.0" layoutY="303.0" onAction="#getStarted" prefHeight="47.0" prefWidth="138.0" style="-fx-background-color: #802876; -fx-background-radius: 20;" text="Get Started" textFill="WHITE" visible="false">
+                     <font>
+                        <Font name="Montserrat Regular" size="18.0" />
+                     </font>
+                  </JFXButton>
+                  <FontAwesomeIconView fx:id="connected" fill="#4caf50" glyphName="CHECK_CIRCLE" layoutX="157.0" layoutY="225.0" size="190" visible="false" wrappingWidth="167.20199745893478" />
+               </children>
+            </Pane>
+         </children>
+      </Pane>
+      <Pane fx:id="joinPane" prefHeight="526.0" prefWidth="677.0" style="-fx-background-color: rgba(1,1,1,0.7);" visible="false">
+         <children>
+            <Pane layoutX="612.0" layoutY="26.0" prefHeight="40.0" prefWidth="40.0" style="-fx-background-color: #f1f1f1; -fx-background-radius: 50;">
+               <children>
+                  <ImageView fitHeight="35.0" fitWidth="35.0" layoutX="3.0" layoutY="3.0" onMousePressed="#backButton2" pickOnBounds="true">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <image>
+                        <Image url="@images/back.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+            <Text fill="WHITE" layoutX="201.0" layoutY="261.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Steps to connect to a chat group">
+               <font>
+                  <Font name="Montserrat Bold" size="16.0" />
+               </font>
+            </Text>
+            <Separator layoutX="247.0" layoutY="277.0" prefWidth="200.0" />
+            <Text fill="WHITE" layoutX="128.0" layoutY="312.0" strokeType="OUTSIDE" strokeWidth="0.0" text="1. Make sure your Wi-Fi is on">
+               <font>
+                  <Font name="Montserrat Bold" size="16.0" />
+               </font>
+            </Text>
+            <Text fill="WHITE" layoutX="128.0" layoutY="353.0" strokeType="OUTSIDE" strokeWidth="0.0" text="2. Go to the connections section on your task bar">
+               <font>
+                  <Font name="Montserrat Bold" size="16.0" />
+               </font>
+            </Text>
+            <Text fill="WHITE" layoutX="128.0" layoutY="394.0" strokeType="OUTSIDE" strokeWidth="0.0" text="3. Connect to your desired Wi-Fi connection">
+               <font>
+                  <Font name="Montserrat Bold" size="16.0" />
+               </font>
+            </Text>
+            <JFXButton buttonType="RAISED" layoutX="271.0" layoutY="421.0" onAction="#create" prefHeight="47.0" prefWidth="125.0" style="-fx-background-color: #802876; -fx-background-radius: 20;" text="Connect" textFill="WHITE">
+               <font>
+                  <Font name="Open Sans Bold" size="18.0" />
+               </font>
+            </JFXButton>
+            <MaterialDesignIconView fill="#7c959a" glyphName="ACCOUNT_CONVERT" layoutX="239.0" layoutY="217.0" size="200" />
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

@@ -1,0 +1,15 @@
+.btns_active{
+	-fx-background-color: #252F33;
+}
+
+.btns:hover{
+	-fx-background-color: #313A41;
+}
+
+.btns:hover .icons{
+	-fx-fill: #eef1f8;
+}
+
+.icons_active{
+    -fx-fill: #eef1f8;
+}
