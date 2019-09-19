@@ -108,23 +108,23 @@ public class WyChatDashController implements Initializable {
 
         if (messageBtn.getStyleClass().size() == 2 && messageIcon.getStyleClass().size() == 2) {
 
-        } else if (messageBtn.getStyleClass().size() == 3 && messageIcon.getStyleClass().size() == 3) {
-            messageBtn.getStyleClass().remove(2);
-            messageIcon.getStyleClass().remove(2);
+        } else if (messageBtn.getStyleClass().size() == 4 && messageIcon.getStyleClass().size() == 4) {
+            messageBtn.getStyleClass().remove(3);
+            messageIcon.getStyleClass().remove(3);
         }
 
         if (settingsBtn.getStyleClass().size() == 2 && settingIcon.getStyleClass().size() == 2) {
 
-        } else if (settingsBtn.getStyleClass().size() == 3 && settingIcon.getStyleClass().size() == 3) {
-            settingsBtn.getStyleClass().remove(2);
-            settingIcon.getStyleClass().remove(2);
+        } else if (settingsBtn.getStyleClass().size() == 4 && settingIcon.getStyleClass().size() == 4) {
+            settingsBtn.getStyleClass().remove(3);
+            settingIcon.getStyleClass().remove(3);
         }
 
         if (aboutBtn.getStyleClass().size() == 2 && aboutIcon.getStyleClass().size() == 2) {
 
-        } else if (aboutBtn.getStyleClass().size() == 3 && aboutIcon.getStyleClass().size() == 3) {
-            aboutBtn.getStyleClass().remove(2);
-            aboutIcon.getStyleClass().remove(2);
+        } else if (aboutBtn.getStyleClass().size() == 4 && aboutIcon.getStyleClass().size() == 4) {
+            aboutBtn.getStyleClass().remove(3);
+            aboutIcon.getStyleClass().remove(3);
         }
 
         if (dashBtn.getStyleClass().toString().contains("btns_active") && dashIcon.getStyleClass().toString().contains("icons_active")) {
@@ -162,23 +162,23 @@ public class WyChatDashController implements Initializable {
 
         if (messageBtn.getStyleClass().size() == 2 && messageIcon.getStyleClass().size() == 2) {
 
-        } else if (messageBtn.getStyleClass().size() == 3 && messageIcon.getStyleClass().size() == 3) {
-            messageBtn.getStyleClass().remove(2);
-            messageIcon.getStyleClass().remove(2);
+        } else if (messageBtn.getStyleClass().size() == 4 && messageIcon.getStyleClass().size() == 4) {
+            messageBtn.getStyleClass().remove(3);
+            messageIcon.getStyleClass().remove(3);
         }
 
         if (settingsBtn.getStyleClass().size() == 2 && settingIcon.getStyleClass().size() == 2) {
 
-        } else if (settingsBtn.getStyleClass().size() == 3 && settingIcon.getStyleClass().size() == 3) {
-            settingsBtn.getStyleClass().remove(2);
-            settingIcon.getStyleClass().remove(2);
+        } else if (settingsBtn.getStyleClass().size() == 4 && settingIcon.getStyleClass().size() == 4) {
+            settingsBtn.getStyleClass().remove(3);
+            settingIcon.getStyleClass().remove(3);
         }
 
         if (aboutBtn.getStyleClass().size() == 2 && aboutIcon.getStyleClass().size() == 2) {
 
-        } else if (aboutBtn.getStyleClass().size() == 3 && aboutIcon.getStyleClass().size() == 3) {
-            aboutBtn.getStyleClass().remove(2);
-            aboutIcon.getStyleClass().remove(2);
+        } else if (aboutBtn.getStyleClass().size() == 4 && aboutIcon.getStyleClass().size() == 4) {
+            aboutBtn.getStyleClass().remove(3);
+            aboutIcon.getStyleClass().remove(3);
         }
 
         if (videoBtn.getStyleClass().toString().contains("btns_active") && videoIcon.getStyleClass().toString().contains("icons_active")) {
@@ -223,16 +223,16 @@ public class WyChatDashController implements Initializable {
 
         if (settingsBtn.getStyleClass().size() == 2 && settingIcon.getStyleClass().size() == 2) {
 
-        } else if (settingsBtn.getStyleClass().size() == 3 && settingIcon.getStyleClass().size() == 3) {
-            settingsBtn.getStyleClass().remove(2);
-            settingIcon.getStyleClass().remove(2);
+        } else if (settingsBtn.getStyleClass().size() == 4 && settingIcon.getStyleClass().size() == 4) {
+            settingsBtn.getStyleClass().remove(3);
+            settingIcon.getStyleClass().remove(3);
         }
 
         if (aboutBtn.getStyleClass().size() == 2 && aboutIcon.getStyleClass().size() == 2) {
 
-        } else if (aboutBtn.getStyleClass().size() == 3 && aboutIcon.getStyleClass().size() == 3) {
-            aboutBtn.getStyleClass().remove(2);
-            aboutIcon.getStyleClass().remove(2);
+        } else if (aboutBtn.getStyleClass().size() == 4 && aboutIcon.getStyleClass().size() == 4) {
+            aboutBtn.getStyleClass().remove(3);
+            aboutIcon.getStyleClass().remove(3);
         }
 
 
@@ -278,16 +278,16 @@ public class WyChatDashController implements Initializable {
 
         if (messageBtn.getStyleClass().size() == 2 && messageIcon.getStyleClass().size() == 2) {
 
-        } else if (messageBtn.getStyleClass().size() == 3 && messageIcon.getStyleClass().size() == 3) {
-            messageBtn.getStyleClass().remove(2);
-            messageIcon.getStyleClass().remove(2);
+        } else if (messageBtn.getStyleClass().size() == 4 && messageIcon.getStyleClass().size() == 4) {
+            messageBtn.getStyleClass().remove(3);
+            messageIcon.getStyleClass().remove(3);
         }
 
         if (aboutBtn.getStyleClass().size() == 2 && aboutIcon.getStyleClass().size() == 2) {
 
-        } else if (aboutBtn.getStyleClass().size() == 3 && aboutIcon.getStyleClass().size() == 3) {
-            aboutBtn.getStyleClass().remove(2);
-            aboutIcon.getStyleClass().remove(2);
+        } else if (aboutBtn.getStyleClass().size() == 4 && aboutIcon.getStyleClass().size() == 4) {
+            aboutBtn.getStyleClass().remove(3);
+            aboutIcon.getStyleClass().remove(3);
         }
 
         if (settingsBtn.getStyleClass().toString().contains("btns_active") && settingIcon.getStyleClass().toString().contains("icons_active")) {
@@ -332,16 +332,16 @@ public class WyChatDashController implements Initializable {
 
         if (messageBtn.getStyleClass().size() == 2 && messageIcon.getStyleClass().size() == 2) {
 
-        } else if (messageBtn.getStyleClass().size() == 3 && messageIcon.getStyleClass().size() == 3) {
-            messageBtn.getStyleClass().remove(2);
-            messageIcon.getStyleClass().remove(2);
+        } else if (messageBtn.getStyleClass().size() == 4 && messageIcon.getStyleClass().size() == 4) {
+            messageBtn.getStyleClass().remove(3);
+            messageIcon.getStyleClass().remove(3);
         }
 
         if (settingsBtn.getStyleClass().size() == 2 && settingIcon.getStyleClass().size() == 2) {
 
-        } else if (settingsBtn.getStyleClass().size() == 3 && settingIcon.getStyleClass().size() == 3) {
-            settingsBtn.getStyleClass().remove(2);
-            settingIcon.getStyleClass().remove(2);
+        } else if (settingsBtn.getStyleClass().size() == 4 && settingIcon.getStyleClass().size() == 4) {
+            settingsBtn.getStyleClass().remove(3);
+            settingIcon.getStyleClass().remove(3);
         }
 
         if (aboutBtn.getStyleClass().toString().contains("btns_active") && aboutIcon.getStyleClass().toString().contains("icons_active")) {

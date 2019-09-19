@@ -8,9 +8,15 @@ package sample;
 import com.jfoenix.controls.JFXButton;
 import com.jfoenix.controls.JFXSpinner;
 import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView;
+
+import java.awt.*;
+import java.io.BufferedReader;
 import java.io.IOException;
+import java.io.InputStreamReader;
 import java.net.URL;
 import java.util.ResourceBundle;
+import java.util.concurrent.ExecutionException;
+import java.util.concurrent.TimeoutException;
 import javafx.animation.FadeTransition;
 import javafx.animation.PauseTransition;
 import javafx.event.ActionEvent;
@@ -91,33 +97,96 @@ public class WyChat_HomeController implements Initializable {
         fade2.play();
     }
 
-    @FXML
-    private void create(ActionEvent event) throws IOException {
-        PauseTransition pause = new PauseTransition(Duration.seconds(5));
-        getStarted.setVisible(true);
-        FadeTransition fade2 = new FadeTransition();
-        fade2.setDuration(Duration.millis(500));
-        fade2.setNode(getStarted);
-        fade2.setFromValue(0);
-        fade2.setToValue(1);
-        fade2.play();
-        pause.play();
-        pause.setOnFinished(new EventHandler<ActionEvent>() {
-            @Override
-            public void handle(ActionEvent event) {
-                spinner.setVisible(false);
-                connection.setText("Connection Succesfull!");
-                connected.setVisible(true);
-                start.setVisible(true);
-                FadeTransition fade3 = new FadeTransition();
-                fade3.setDuration(Duration.millis(1000));
-                fade3.setNode(start);
-                fade3.setFromValue(0);
-                fade3.setToValue(1);
-                fade3.play();
 
+    public static void notif(String title, String message) throws AWTException {
+
+        SystemTray tray = SystemTray.getSystemTray();
+
+        Image image = Toolkit.getDefaultToolkit().createImage("");
+        TrayIcon trayIcon = new TrayIcon(image);
+        trayIcon.setImageAutoSize(true);
+        tray.add(trayIcon);
+
+        trayIcon.displayMessage(title, message, TrayIcon.MessageType.INFO);
+    }
+
+    public boolean validateField(String username, String password){
+        if(!username.isEmpty() && !password.isEmpty()){
+            return true;
+        }else {
+            System.out.println("Empty");
+            return false;
+        }
+    }
+
+    String user;
+
+    String pass;
+
+    @FXML
+    private void create(ActionEvent event) throws IOException, AWTException {
+//        notif();
+
+        PauseTransition pause;
+
+        user = username.getText();
+
+        pass = password.getText();
+
+
+        if(validateField(user, pass)){
+            ProcessBuilder builder = new ProcessBuilder(
+                    "cmd.exe", "/c", "netsh wlan set hostednetwork mode=allow ssid=" +user+ " key="+pass+ " keyUsage=temporary");
+            builder.redirectErrorStream(true);
+            Process p = builder.start();
+            BufferedReader r = new BufferedReader(new InputStreamReader(p.getInputStream()));
+            String line;
+            while (true) {
+                line = r.readLine();
+                if (line == null) { break; }
+                System.out.println(line);
             }
-        });
+
+            ProcessBuilder builder2 = new ProcessBuilder(
+                    "cmd.exe", "/c", "netsh wlan start hostednetwork");
+            builder2.redirectErrorStream(true);
+            Process p2 = builder2.start();
+            BufferedReader r2 = new BufferedReader(new InputStreamReader(p2.getInputStream()));
+            String line2;
+            while (true) {
+                line2 = r2.readLine();
+                if (line2 == null) { break; }
+                System.out.println(line2);
+            }
+
+
+                pause = new PauseTransition(Duration.seconds(5));
+                getStarted.setVisible(true);
+                FadeTransition fade2 = new FadeTransition();
+                fade2.setDuration(Duration.millis(500));
+                fade2.setNode(getStarted);
+                fade2.setFromValue(0);
+                fade2.setToValue(1);
+                fade2.play();
+                pause.play();
+                pause.setOnFinished(new EventHandler<ActionEvent>() {
+                    @Override
+                    public void handle(ActionEvent event) {
+                        spinner.setVisible(false);
+                        connection.setText("Connection Succesfull!");
+                        connected.setVisible(true);
+                        start.setVisible(true);
+                        FadeTransition fade3 = new FadeTransition();
+                        fade3.setDuration(Duration.millis(1000));
+                        fade3.setNode(start);
+                        fade3.setFromValue(0);
+                        fade3.setToValue(1);
+                        fade3.play();
+
+                    }
+                });
+
+        }
 
     }
 
